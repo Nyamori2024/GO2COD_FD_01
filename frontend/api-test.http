@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+  "title": "Extra Fields Test thye do that ",
+  "body": "This post has extra fields.",
+  "author": "Anonymous jkolllllllllll",
+  "tags": ["test", "api", "mongodb"]
+}

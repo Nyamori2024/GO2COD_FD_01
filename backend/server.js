@@ -1,10 +1,28 @@
-import express from'express';
-const app=express();
-app.get("/", (req, res)=>{
-res.send('am enjoying')
-});
+import dotenv from 'dotenv';
+dotenv.config(); // Load environment variables from .env file
 
-const PORT=5000;
-app.listen(PORT, ()=>{
-  console.log(`Am running on port ${PORT}`)
-})
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import postRoutes from './routes/postRoutes.js';
+import connectToDatabase from './config/config.js'; // Import the connection function
+
+const app = express();
+app.use(cors()); // Enable CORS for all routes
+app.use(express.json()); // Parse JSON request bodies
+
+app.use('/api', postRoutes); // Use postRoutes for API endpoints
+
+// Connect to MongoDB before starting the server
+connectToDatabase()
+  .then(() => {
+    // Set the port and start the server after successful connection
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`Server is running on http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error('Failed to connect to the database:', err);
+    process.exit(1); // Exit the process with an error code
+  });
