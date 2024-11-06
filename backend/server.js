@@ -1,5 +1,9 @@
 import dotenv from 'dotenv';
-dotenv.config(); // Load environment variables from .env file
+dotenv.config(); // Load environment variables from .env 
+// import dotenv from 'dotenv';
+dotenv.config({ path: new URL('./.env', import.meta.url) });
+
+ 
 
 import express from 'express';
 import mongoose from 'mongoose';
