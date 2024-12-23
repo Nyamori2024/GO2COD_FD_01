@@ -64,7 +64,7 @@ The backend is structured using the MVC pattern.
 
 ### File Structure
 
-backend/ ├── controllers/ │ └── postController.js ├── models/ │ └── Post.js ├── routes/ │ └── postRoutes.js ├── config/ │ └── db.js ├── server.js
+ go2cod_fd_01/backend/ ├── controllers/ │ └── postController.js ├── models/ │ └── Post.js ├── routes/ │ └── postRoutes.js ├── config/ │ └── db.js ├── server.js
 
 yaml
 Copy code
@@ -94,7 +94,7 @@ cd frontend
 npm install
 
 # Install backend dependencies
-cd ../backend
+cd go2cod_fd_01
 npm install
 Set up environment variables:
 
@@ -102,17 +102,15 @@ Create a .env file in the backend folder.
 
 Add the following variables:
 
-makefile
-Copy code
-MONGO_URI=your_mongodb_connection_string
-PORT=5000
+MONGO_URI=mongodb+srv://abutochris2015:pPf6AsdAMoYCrLKY@cluster0.ilhc6.mongodb.net/database-blog?retryWrites=true&w=majority&appName=Cluster0
+
 Start the development server:
 
 bash
 Copy code
 # Start the backend
-cd backend
-npm start
+cd go2cod_fd_01
+npm run dev
 
 # Start the frontend
 cd ../frontend
@@ -128,8 +126,7 @@ Fork the repository.
 Create a new branch for your feature/bug fix.
 Commit your changes with descriptive messages.
 Open a pull request.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+
 
 Acknowledgments
 Material-UI for components.
