@@ -102,7 +102,7 @@ Create a .env file in the backend folder.
 
 Add the following variables:
 
-MONGO_URI=mongodb+srv://abutochris2015:pPf6AsdAMoYCrLKY@cluster0.ilhc6.mongodb.net/database-blog?retryWrites=true&w=majority&appName=Cluster0
+MONGO_URI= mongodb+srv://<db_username>:<db_password>@cluster0.ilhc6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 Start the development server:
 
