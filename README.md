@@ -83,7 +83,7 @@ Copy code
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo/blog-platform.git
+   git clone https://github.com/Nyamori2024/GO2COD_FD_01.git
    cd blog-platform
 Install dependencies:
 
