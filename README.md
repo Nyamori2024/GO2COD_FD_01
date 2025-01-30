@@ -113,7 +113,7 @@ Fork the repository.
 Create a new branch for your feature/bug fix.
 Commit your changes with descriptive messages.
 Open a pull request.
-Acknowledgements
+Acknowledgments
 Material-UI for components.
 Framer Motion for animations.
 React Toastify for notifications.
